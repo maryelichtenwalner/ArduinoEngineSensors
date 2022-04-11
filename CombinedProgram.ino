@@ -151,14 +151,14 @@ void loop() {
   // Convert pressures to proper units, want output in psi
   // Pressure transducer 1
   float voltage1 = (pressureReading1*5.0)/1023.0;
-  float calibration1 = 0.135;                                                            // Calibrate here. Adjust so that ambient pressure is correct.
+  float calibration1 = 0.17;                                                            // Calibrate here. Adjust so that ambient pressure is correct.
   float pressure_pascal1 = (3.0*(voltage1-calibration1))*1000000.0; 
   float pressure_bar1 = pressure_pascal1/10e5;
   float pressure_psi1 = pressure_bar1*14.5038;
 
   // Pressure transducer 2
   float voltage2 = (pressureReading2*5.0)/1023.0;
-  float calibration2 = 0.14;                                                             // Calibrate here. Adjust so that ambient pressure is correct.
+  float calibration2 = 0.17;                                                             // Calibrate here. Adjust so that ambient pressure is correct.
   float pressure_pascal2 = (3.0*(voltage2-calibration2))*1000000.0;
   float pressure_bar2 = pressure_pascal2/10e5;
   float pressure_psi2 = pressure_bar2*14.5038;
